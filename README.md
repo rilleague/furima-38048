@@ -22,12 +22,12 @@
 | ------------------ | ---------- | ------------------------------ |
 | name               | string     | null: false                    |
 | content            | text       | null: false                    |
-| category           | string     | null: false                    |
-| condition          | string     | null: false                    |
-| shipping_cost      | string     | null: false                    |
-| shipping_area      | string     | null: false                    |
-| shipping_day       | string     | null: false                    |
-| selling_price      | int        | null: false                    |
+| category_id        | integer    | null: false                    |
+| condition_id       | integer    | null: false                    |
+| shipping_cost_id   | integer    | null: false                    |
+| prefecture_id      | integer    | null: false                    |
+| shipping_day_id    | integer    | null: false                    |
+| selling_price      | integer    | null: false                    |
 | user               | references | null: false, foreign_key: true |
 
 ### association
@@ -51,10 +51,10 @@
 | Column             | Type       | Options                         |
 | ------------------ | ---------- | ------------------------------- |
 | post_code          | string     | null: false                     |
-| prefecture         | string     | null: false                     |
+| prefecture_id      | integer    | null: false                     |
 | city               | string     | null: false                     |
 | street             | string     | null: false                     |
-| building           | string     | null: false                     |
+| building           | string     |                                 |
 | phone              | string     | null: false                     |
 | purchase           | references | null: false, foreign_key: true  |
 
