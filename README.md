@@ -60,4 +60,3 @@
 
 ### association
 - belongs_to :purchase
-
