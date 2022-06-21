@@ -26,8 +26,6 @@ class ItemsController < ApplicationController
   def edit
     if @item.purchase
       redirect_to root_path
-    else
-      render :edit
     end
   end
 
