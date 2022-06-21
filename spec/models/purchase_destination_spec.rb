@@ -50,6 +50,12 @@ RSpec.describe PurchaseDestination, type: :model do
         expect(@purchase_destination.errors.full_messages).to include("City can't be blank")
       end
 
+      it 'streetが空だと保存できないこと' do
+        @purchase_destination.street = ''
+        @purchase_destination.valid?
+        expect(@purchase_destination.errors.full_messages).to include("Street can't be blank")
+      end
+
       it 'phoneが空だと保存できないこと' do
         @purchase_destination.phone = ''
         @purchase_destination.valid?
